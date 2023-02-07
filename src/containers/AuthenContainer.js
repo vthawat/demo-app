@@ -42,8 +42,8 @@ export default function AuthenContainer() {
                 </div>
                 <form onSubmit={_handleSubmitLogin}>
                   <div className="space-y-4">
-                    <input type="text" ref={refEmail} placeholder="Email Address" className="block text-sm py-3 px-4 rounded-lg w-full border outline-none" onFocus={_handleInputFocus} defaultValue="user1@psu.ac.th" />
-                    <input type="password" ref={refPassword} placeholder="Password" className="block text-sm py-3 px-4 rounded-lg w-full border outline-none" onFocus={_handleInputFocus} defaultValue="123456" />
+                    <input type="text" ref={refEmail} placeholder="Email Address" className="block text-sm py-3 px-4 rounded-lg w-full border outline-none" onFocus={_handleInputFocus} />
+                    <input type="password" ref={refPassword} placeholder="Password" className="block text-sm py-3 px-4 rounded-lg w-full border outline-none" onFocus={_handleInputFocus} />
                   </div>
                   {
                     error && (
