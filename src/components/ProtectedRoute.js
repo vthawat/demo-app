@@ -1,14 +1,14 @@
 import React from 'react'
 import { useAuth } from "../states/auth/AuthContext"
-import { Navigate } from "react-router-dom"
+import { Outlet, Navigate } from "react-router-dom"
 import { BASE_PATH } from "../configs/path"
 
-export default function ProtectedRoute({ children }) {
+export default function ProtectedRoute({ ...props }) {
   const { loggedIn } = useAuth()  
-
-  if (!loggedIn) {
+  
+  if (!loggedIn) {    
     return <Navigate to={BASE_PATH} />
+  } else {        
+    return <Outlet />
   }
-    
-  return children
 }

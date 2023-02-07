@@ -1,6 +1,6 @@
-export default function bookMapper(data={}) {
-  console.log(data)
+export default function bookMapper(data={}, id) {  
   return {
+    id,
     bookTitle: data.book_title ? data.book_title : null,
     bookCover: data.book_cover ? data.book_cover : null,
     bookDesc: data.book_desc ? data.book_desc : null,
