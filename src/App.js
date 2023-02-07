@@ -12,10 +12,10 @@ class App extends React.Component {
       <Router>
         <AuthProvider>
           <Routes>
-            <Route path={BASE_PATH} element={<AuthenContainer />} exact />                        
+            <Route path={BASE_PATH} element={<AuthenContainer />} exact index />
             <Route element={<ProtectedRoute />}>
               <Route path={BOOK_PATH} element={<BookContainer />} exact />
-              <Route path={BOOK_PATH+'/:id'} element={<BookDetailContainer />} />
+              <Route path={BOOK_PATH + '/:id'} element={<BookDetailContainer />} />
             </Route>
           </Routes>
         </AuthProvider>

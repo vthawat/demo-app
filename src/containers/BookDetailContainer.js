@@ -106,7 +106,7 @@ export default function BookDetailContainer() {
                           </div>
                         </div>
                         <div class="text-center mt-6">
-                          <Link className="text-xs text-white bg-gray-600 hover:bg-gray-800 py-2 px-4 rounded-lg" to={BOOK_PATH}>ย้อนกลับ</Link>
+                          <Link className="text-xs text-white bg-purple-600 hover:bg-purple-800 py-2 px-4 rounded-lg" to={BOOK_PATH}>Back</Link>
                         </div>
                       </div>
                     </div>

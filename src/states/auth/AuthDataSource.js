@@ -1,14 +1,10 @@
 import { JWT_TOKEN } from "../../configs/constant"
 import { AUTH_ENDPOINT } from "../../configs/url"
 
-async function checkLoggedIn() {
+function checkLoggedIn() {
   const token = localStorage.getItem(JWT_TOKEN)
 
-  if (token) {
-    return true;
-  } else {
-    return false;
-  }
+  return token ? true : false
 }
 
 async function authenticateUser(username, password) {
@@ -32,8 +28,7 @@ async function authenticateUser(username, password) {
         message: res.statusText
       }
     }
-  }).then(data => {
-    console.log(data)
+  }).then(data => {    
     rSuccess = true
     rData = data
     rMessage = 'login successed'

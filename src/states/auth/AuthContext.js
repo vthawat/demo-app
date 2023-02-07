@@ -14,7 +14,8 @@ function AuthProvider({ children }) {
   const [state, dispatch] = useReducer(AuthReducer, INIT_AUTH_USER)
 
   useEffect(() => {
-    if (checkLoggedIn()) {
+    const loggedIn = checkLoggedIn();    
+    if (loggedIn) {
       dispatch({ type: AUTH_SUCCESS })
     }
   }, []);

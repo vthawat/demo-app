@@ -107,7 +107,7 @@ export default function BookContainer() {
                                   <td className="border border-slate-300 dark:border-slate-700 p-4 text-slate-500 dark:text-slate-400">{item.author ? item.author : '-'}</td>
                                   <td className="border border-slate-300 dark:border-slate-700 p-4 text-slate-500 dark:text-slate-400">{item.publishedAt ? moment().format('DD MMMM YYYY', item.publishedAt) : '-'}</td>
                                   <td className="border border-slate-300 dark:border-slate-700 p-4 text-slate-500 dark:text-slate-400 text-center">
-                                    <Link className="bg-blue-500 hover:bg-blue-700 text-white py-2 px-4 rounded" to={BOOK_PATH + '/' + item.id}>View</Link>
+                                    <Link className="bg-purple-600 hover:bg-purple-800 text-white py-2 px-4 rounded" to={BOOK_PATH + '/' + item.id}>View</Link>
                                   </td>
                                 </tr>
                               )

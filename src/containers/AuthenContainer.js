@@ -2,6 +2,7 @@ import React, { useRef, useState } from "react"
 import { useAuth } from "../states/auth/AuthContext"
 import { Navigate } from "react-router-dom"
 import { BOOK_PATH } from "../configs/path"
+import mainLogo from "../assets/img/main-logo.png"
 
 export default function AuthenContainer() {
   const { loggedIn, login, reset, error } = useAuth()
@@ -30,15 +31,15 @@ export default function AuthenContainer() {
       {
         loggedIn ? <Navigate to={BOOK_PATH} />
           : (
-            <div className="min-h-screen bg-blue-400 flex justify-center items-center">
-              <div className="absolute w-60 h-60 rounded-xl bg-blue-300 -top-5 -left-16 z-0 transform rotate-45 hidden md:block">
+            <div className="min-h-screen bg-purple-600 flex justify-center items-center">
+              <div className="absolute w-60 h-60 rounded-xl bg-purple-300 -top-5 -left-16 z-0 transform rotate-45 hidden md:block">
               </div>
-              <div className="absolute w-48 h-48 rounded-xl bg-blue-300 -bottom-6 -right-10 transform rotate-12 hidden md:block">
+              <div className="absolute w-48 h-48 rounded-xl bg-purple-300 -bottom-1 -right-2 transform rotate-12 hidden md:block">
               </div>
               <div className="py-12 px-12 bg-white rounded-2xl shadow-xl z-20">
                 <div>
-                  <h1 className="text-3xl font-bold text-center mb-4 cursor-pointer">WUNCA#42</h1>
-                  <p className="w-80 text-center text-sm mb-8 font-semibold text-gray-700 tracking-wide cursor-pointer">Strapi Work shop by Faculty of Engineer<br />Prince of Songkla University</p>
+                  <img src={mainLogo} alt="strapi workshop" style={{ height: "80px"}} class="object-fit" />
+                  <p className="w-80 text-center text-sm mb-8 mt-2 font-semibold text-gray-700 tracking-wide cursor-pointer">WUNCA#42 Workshop</p>
                 </div>
                 <form onSubmit={_handleSubmitLogin}>
                   <div className="space-y-4">
@@ -54,7 +55,7 @@ export default function AuthenContainer() {
                     )
                   }
                   <div className="text-center mt-6">
-                    <button className="py-3 w-64 text-xl text-white bg-blue-400 rounded-2xl" disabled={processing}>
+                    <button className="py-3 w-64 text-md text-white bg-purple-600 rounded-2xl" disabled={processing}>
                       {
                         processing ? (
                           <svg aria-hidden="true" role="status" className="inline w-4 h-4 mr-3 text-white animate-spin" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -69,9 +70,9 @@ export default function AuthenContainer() {
                   </div>
                 </form>
               </div>
-              <div className="w-40 h-40 absolute bg-blue-300 rounded-full top-0 right-12 hidden md:block"></div>
+              <div className="w-40 h-40 absolute bg-purple-300 rounded-full top-0 right-12 hidden md:block"></div>
               <div
-                className="w-20 h-40 absolute bg-blue-300 rounded-full bottom-20 left-10 transform rotate-45 hidden md:block">
+                className="w-20 h-40 absolute bg-purple-300 rounded-full bottom-20 left-10 transform rotate-45 hidden md:block">
               </div>
             </div>
           )
