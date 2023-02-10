@@ -38,7 +38,7 @@ export default function AuthenContainer() {
               </div>
               <div className="py-12 px-12 bg-white rounded-2xl shadow-xl z-20">
                 <div>
-                  <img src={mainLogo} alt="strapi workshop" style={{ height: "80px"}} class="object-fit" />
+                  <img src={mainLogo} alt="strapi workshop" style={{ height: "80px"}} className="object-fit" />
                   <p className="w-80 text-center text-sm mb-8 mt-2 font-semibold text-gray-700 tracking-wide cursor-pointer">WUNCA#42 Workshop</p>
                 </div>
                 <form onSubmit={_handleSubmitLogin}>

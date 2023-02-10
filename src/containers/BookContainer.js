@@ -88,7 +88,13 @@ export default function BookContainer() {
                         <tbody>
                           {
                             state.data.map((item, index) => {
-                              const imageUrl = ENDPOINT_URL + item.bookCover.data.attributes.url
+
+                              let imageUrl
+                              if (item.bookCover.data !== null) {
+                                imageUrl = ENDPOINT_URL + item.bookCover.data.attributes.url                                
+                              } else {
+                                imageUrl = noImage
+                              }
                               return (
                                 <tr key={index}>
                                   <td className="border border-slate-300 dark:border-slate-700 p-4 text-slate-500 dark:text-slate-400">

@@ -66,16 +66,17 @@ async function getBook(params) {
         }
       }
     })
-    .then(resData => {      
-      if (resData.data.length > 0) {        
-        result = resData.data.map(value => BookMapper(value.attributes, value.id))           
+    .then(resData => {    
+      if (resData.data.length > 0) {     
+        result = resData.data.map(value => {
+          return BookMapper(value.attributes, value.id)
+        })           
         itemsCount = resData.meta.pagination.total
       } 
     })
     .catch(fetchError => {
       error = fetchError
     });
-
   return {
     result,
     itemsCount,
